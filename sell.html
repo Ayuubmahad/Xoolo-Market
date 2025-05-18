@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell With Us - XOOLO MARKET</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">XOOLO MARKET</div>
+      <ul class="nav-right">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Things We Sell</a></li>
+        <li><a href="sell.html">Sell With Us</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="form-section">
+    <h1>Sell Your Livestock With Us</h1>
+    <p>List your livestock for trade. Simply fill out the form below.</p>
+
+    <form action="sell_backend.php" method="POST" enctype="multipart/form-data" class="styled-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="animal">Type of Animal</label>
+      <select id="animal" name="animal" required>
+        <option value="">Select Animal</option>
+        <option value="camel">Camel</option>
+        <option value="cow">Cow</option>
+        <option value="goat">Goat</option>
+        <option value="sheep">Sheep</option>
+        <option value="chicken">Chicken</option>
+      </select>
+
+      <label for="description">Animal Description</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+
+      <label for="photo">Upload Photo (Optional)</label>
+      <input type="file" id="photo" name="photo">
+
+      <label for="contact">Your Contact Info</label>
+      <input type="tel" id="contact" name="contact" placeholder="Enter phone number" required>
+
+      <button type="submit" class="btn">Submit Listing</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 XOOLO MARKET. All rights reserved.</p>
+  </footer>
+</body>
+</html>
