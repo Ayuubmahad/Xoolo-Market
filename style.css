@@ -241,3 +241,35 @@ body {
   margin: 1.5rem 0;
   color: #333;
 }
+.product-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.3rem;
+  max-width: 300px;
+}
+.product-card-bubble {
+  background-color: #ffffff;
+  border: 2px solid #a6dba8;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px;
+  height: auto;
+}
+
+.product-card-bubble:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.product-card-bubble h2 {
+  margin: 0.5rem 0 0.3rem;
+  color: #004d00;
+}
+
+.product-card-bubble p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+}
