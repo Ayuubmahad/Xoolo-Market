@@ -5,7 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sell With Us - XOOLO MARKET</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    /* Additional styles only for the sell form */
+    .form-section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .form-section h1 {
+      text-align: center;
+      color: #004d00;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+    
+    .styled-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #004d00;
+      font-weight: 500;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: inherit;
+      background-color: #f7fdf6;
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .full-width {
+      grid-column: 1 / -1;
+    }
+    
+    .file-upload {
+      border: 2px dashed #a6dba8;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      background-color: #f7fdf6;
+    }
+    
+    .file-upload:hover {
+      background-color: #e8f5e9;
+    }
+    
+    .file-upload-input {
+      display: none;
+    }
+    
+    @media (max-width: 768px) {
+      .styled-form {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-section {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -23,32 +106,53 @@
 
   <section class="form-section">
     <h1>Sell Your Livestock With Us</h1>
-    <p>List your livestock for trade. Simply fill out the form below.</p>
+    <p>Join our marketplace and connect with buyers across the region</p>
 
     <form action="sell_backend.php" method="POST" enctype="multipart/form-data" class="styled-form">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="animal">Type of Animal</label>
-      <select id="animal" name="animal" required>
-        <option value="">Select Animal</option>
-        <option value="camel">Camel</option>
-        <option value="cow">Cow</option>
-        <option value="goat">Goat</option>
-        <option value="sheep">Sheep</option>
-        <option value="chicken">Chicken</option>
-      </select>
-
-      <label for="description">Animal Description</label>
-      <textarea id="description" name="description" rows="4" required></textarea>
-
-      <label for="photo">Upload Photo (Optional)</label>
-      <input type="file" id="photo" name="photo">
-
-      <label for="contact">Your Contact Info</label>
-      <input type="tel" id="contact" name="contact" placeholder="Enter phone number" required>
-
-      <button type="submit" class="btn">Submit Listing</button>
+      <div class="form-group">
+        <label for="name">Your Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="animal">Type of Animal</label>
+        <select id="animal" name="animal" required>
+          <option value="">Select Animal</option>
+          <option value="camel">Camel</option>
+          <option value="cow">Cow</option>
+          <option value="goat">Goat</option>
+          <option value="sheep">Sheep</option>
+          <option value="chicken">Chicken</option>
+        </select>
+      </div>
+      
+      <div class="form-group full-width">
+        <label for="description">Animal Description</label>
+        <textarea id="description" name="description" required placeholder="Age, health condition, special features..."></textarea>
+      </div>
+      
+      <div class="form-group full-width">
+        <label>Upload Photo (Max 5MB)</label>
+        <label class="file-upload">
+          <input type="file" id="photo" name="photo" class="file-upload-input" accept="image/*">
+          <div>Click to upload photos of your animal</div>
+          <small>JPEG or PNG format</small>
+        </label>
+      </div>
+      
+      <div class="form-group">
+        <label for="contact">Phone Number</label>
+        <input type="tel" id="contact" name="contact" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" required>
+      </div>
+      
+      <div class="form-group full-width">
+        <button type="submit" class="btn">Submit Listing</button>
+      </div>
     </form>
   </section>
 
