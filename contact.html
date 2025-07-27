@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
-    
+    /* Additional contact page styles with two-column layout */
     .contact-section {
       max-width: 800px;
       margin: 2rem auto;
@@ -149,18 +149,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="nav-left">XOOLO MARKET</div>
-      <ul class="nav-right">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Things We Sell</a></li>
-        <li><a href="sell.html">Sell With Us</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Navigation Bar -->
+<header>
+  <nav class="navbar">
+    <div class="nav-left">XOOLO MARKET</div>
+
+    <!-- Hamburger icon (visible only on phone) -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Navigation links -->
+    <ul class="nav-right nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Things We Sell</a></li>
+      <li><a href="sell.html">Sell With Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <section class="contact-section">
     <h1>Contact Us</h1>
@@ -218,5 +225,13 @@
   <footer>
     <p>&copy; 2025 XOOLO MARKET. All rights reserved.</p>
   </footer>
+
+  <script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("show");
+  }
+  </script>
+
 </body>
 </html>
