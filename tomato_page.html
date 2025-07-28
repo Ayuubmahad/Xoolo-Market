@@ -1,0 +1,72 @@
+<!-- Fixed Goat Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goats - XOOLO MARKET</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>    
+  <!-- Navigation Bar -->
+<header>
+  <nav class="navbar">
+    <div class="nav-left">XOOLO MARKET</div>
+
+    <!-- Hamburger icon (visible only on phone) -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Navigation links -->
+    <ul class="nav-right nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Things We Sell</a></li>
+      <li><a href="sell.html">Sell With Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  
+
+    <div class="container">
+      <div class="image-container">
+        <img src="/images/tomato.jpg" alt="tomato">
+      </div>
+    <div class="details">
+        <div class="details-row">
+            <div class="label">Plant:</div>
+            <div class="value">tomato</div>
+        </div>
+        
+        <div class="details-row">
+            <div class="label">Price Per Kg:</div>
+            <div class="value">$1</div>
+        </div>
+        <div class="details-row">
+            <div class="label">Location:</div>
+            <div class="value">Mogadishu</div>
+        </div>
+        <div class="details-row">
+            <div class="label">Contact:</div>
+            <div class="value">+252 61 3085491</div>
+        </div>
+    </div>
+    </div>
+
+
+  <footer>
+    <p>&copy; 2025 XOOLO MARKET. All rights reserved.</p>
+  </footer>
+  
+  <script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("show");
+  }
+  </script>
+
+</body>
+</html>
