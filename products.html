@@ -1,97 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sell With Us - XOOLO MARKET</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Things We Sell - XOOLO MARKET</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="favicon.png">
-  <style>
-    /* Additional styles only for the sell form */
-    .form-section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    
-    .form-section h1 {
-      text-align: center;
-      color: #004d00;
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
-    }
-    
-    .styled-form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-    
-    .form-group {
-      margin-bottom: 1rem;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: #004d00;
-      font-weight: 500;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-family: inherit;
-      background-color: #f7fdf6;
-    }
-    
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-    
-    .full-width {
-      grid-column: 1 / -1;
-    }
-    
-    .file-upload {
-      border: 2px dashed #a6dba8;
-      border-radius: 8px;
-      padding: 1.5rem;
-      text-align: center;
-      cursor: pointer;
-      background-color: #f7fdf6;
-    }
-    
-    .file-upload:hover {
-      background-color: #e8f5e9;
-    }
-    
-    .file-upload-input {
-      display: none;
-    }
-    
-    @media (max-width: 768px) {
-      .styled-form {
-        grid-template-columns: 1fr;
-      }
-      
-      .form-section {
-        margin: 1rem;
-        padding: 1.5rem;
-      }
-    }
-  </style>
 </head>
 <body>
- <!-- Navigation Bar -->
+  <!-- Navigation Bar -->
 <header>
   <nav class="navbar">
     <div class="nav-left">XOOLO MARKET</div>
@@ -110,64 +27,110 @@
   </nav>
 </header>
 
+<section class="products">
+  <h1>Our Products</h1>
 
-  <section class="form-section">
-  <h1>Sell Your Products With Us</h1>
-  <p>Join our marketplace and connect with buyers across the region</p>
+  <!-- Livestock Section -->
+  <h2>Livestock</h2>
+  <div class="product-grid">
 
-  <form action="sell_backend.php" method="POST" enctype="multipart/form-data" class="styled-form">
-    <div class="form-group">
-      <label for="name">Your Full Name</label>
-      <input type="text" id="name" name="name" required>
+    <div class="product-grid-cards">
+      <a href="camel_page.html" class="product-card">
+        <div class="product-card-bubble">
+          <img src="images/camel_square.jpg" alt="Camel">
+          <h2>Geel (Camel)</h2>
+          <p>Valued for milk, strength, and endurance in the Somali desert.</p>
+        </div>
+      </a>
     </div>
 
-    <div class="form-group">
-      <label for="product-type">What Are You Selling?</label>
-      <select id="product-type" name="product_type" required>
-        <option value="">Select Product</option>
-        <optgroup label="Livestock">
-          <option value="camel">Camel</option>
-          <option value="cow">Cow</option>
-          <option value="goat">Goat</option>
-          <option value="sheep">Sheep</option>
-          <option value="chicken">Chicken</option>
-        </optgroup>
-        <optgroup label="Crops">
-          <option value="tomato">Tomato (Yaanyo)</option>
-          <option value="cucumber">Cucumber (Qajaar)</option>
-          <option value="chili">Chili (Basbas)</option>
-        </optgroup>
-      </select>
+    <div class="product-grid-cards">
+      <a href="cow_page.html" class="product-card">
+        <div class="product-card-bubble">
+          <img src="images/cow_square.jpg" alt="Cow">
+          <h2>Lo’ (Cow)</h2>
+          <p>Valued for milk production, meat, and agricultural labor in Somali farms.</p>
+        </div>
+      </a>
     </div>
 
-    <div class="form-group full-width">
-      <label for="description">Product Description</label>
-      <textarea id="description" name="description" required placeholder="Age or harvest details, condition, special features..."></textarea>
+    <div class="product-grid-cards">
+      <a href="goat_page.html" class="product-card">
+        <div class="product-card-bubble">
+          <img src="images/goat_square.jpg" alt="Goat">
+          <h2>Ri’ (Goat)</h2>
+          <p>Valued for meat, milk, and adaptability to harsh Somali climates.</p>
+        </div>
+      </a>
     </div>
 
-    <div class="form-group full-width">
-      <label>Upload Photo (Max 5MB)</label>
-      <label class="file-upload">
-        <input type="file" id="photo" name="photo" class="file-upload-input" accept="image/*">
-        <div>Click to upload a photo of your product</div>
-        <small>JPEG or PNG format</small>
-      </label>
+    <div class="product-grid-cards">
+      <a href="sheep_page.html" class="product-card">
+        <div class="product-card-bubble">
+          <img src="images/sheep_square.jpg" alt="Sheep">
+          <h2>Ido (Sheep)</h2>
+          <p>Valued for meat, wool, and cultural importance during Eid and other occasions.</p>
+        </div>
+      </a>
     </div>
 
-    <div class="form-group">
-      <label for="contact">Phone Number</label>
-      <input type="tel" id="contact" name="contact" required>
+    <div class="product-grid-cards">
+      <a href="chicken_page.html" class="product-card">
+        <div class="product-card-bubble">
+          <img src="images/chicken_square.jpg" alt="Chicken">
+          <h2>Digaag (Chicken)</h2>
+          <p>Valued for eggs, meat, and quick farming in Somali homes and villages.</p>
+        </div>
+      </a>
     </div>
 
-    <div class="form-group">
-      <label for="location">Location</label>
-      <input type="text" id="location" name="location" required>
+  </div>
+
+  <!-- Crops Section -->
+  <h2>Crops</h2>
+  <div class="product-grid">
+
+    <div class="product-grid-cards">
+      <a href="paprika_page.html" class="product-card">
+        <div class="product-card-bubble">
+          <img src="images/paprika_square.jpeg" alt="Paprika">
+          <h2>Barbarooni (Paprika)</h2>
+          <p>Valued for color, flavor, and spice in Somali cooking.</p>
+        </div>
+      </a>
     </div>
 
-    <div class="form-group full-width">
-      <button type="submit" class="btn">Submit Listing</button>
+    <div class="product-grid-cards">
+      <a href="cucumber_page.html" class="product-card">
+        <div class="product-card-bubble">
+          <img src="images/cucumber_square.jpeg" alt="Cucumber">
+          <h2>Qayaar (Cucumber)</h2>
+          <p>Valued for its refreshing taste, high water content, and ability to grow well in Somali soil.</p>
+        </div>
+      </a>
     </div>
-  </form>
+
+    <div class="product-grid-cards">
+      <a href="chilli_page.html" class="product-card">
+        <div class="product-card-bubble">
+          <img src="images/chilli_square.jpeg" alt="Chilli">
+          <h2>Basbaas (Chilli)</h2>
+          <p>Valued for its strong flavor, use in traditional Somali dishes, and ability to boost appetite.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="product-grid-cards">
+      <a href="tomato_page.html" class="product-card">
+        <div class="product-card-bubble">
+          <img src="images/tomato_square.jpeg" alt="Tomato">
+          <h2>Yaanyo (Tomato)</h2>
+          <p>Valued for its rich flavor, versatility in cooking, and essential role in Somali sauces and salads.</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
 </section>
 
 
