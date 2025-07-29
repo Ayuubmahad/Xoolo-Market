@@ -71,7 +71,9 @@ body {
   .products h1 {
     text-align: center;
     font-size: 2cm;
-    
+    margin-top: 10;
+    margin: 0;
+
   }
 
   .product-grid {
@@ -327,6 +329,10 @@ body {
   .menu-icon {
     display: block;
   }
+
+  .products h1 {
+    font-size: 1.5cm;
+  }
 }
 
 /* Remove right-side gap on small screens */
@@ -349,6 +355,7 @@ body {
     margin-left: auto;
     padding-right: 10px;
   }
+
 }
 
 .container {
@@ -415,11 +422,11 @@ body {
   padding: 3rem 1.5rem;
   background-color: #f9f9f9;
   text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
-.products h1 {
-  margin-top: -10;
-}
+
 
 .section-intro {
   max-width: 600px;
@@ -479,4 +486,8 @@ body {
   border-radius: 8px;
   font-size: 0.95rem;
   display: inline-block;
+}
+
+.menu-icon {
+  z-index: 10;
 }
