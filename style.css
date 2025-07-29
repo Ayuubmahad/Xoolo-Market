@@ -27,6 +27,11 @@ body {
     font-weight: bold;
     color: #004d00;
   }
+
+  .nav-left a {
+    color: inherit;
+    text-decoration: none;
+  }
   
   .nav-right {
     list-style: none;
